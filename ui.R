@@ -93,7 +93,7 @@ shinyUI(
                       )
              ),
              tabPanel("Within City Comparison",
-                      leafletOutput("map4", width="100%", height="100%"),
+                      leafletOutput("map4"),
                       absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
                                     draggable = TRUE, top = 60, left = "auto", right = 20, bottom = "auto",
                                     width = 330, height = "auto",
