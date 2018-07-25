@@ -29,7 +29,7 @@ shinyServer(function(input, output,session) {
     m1<-meas_filter(state_wide_1,input$data_type,input$measure1)
     m2<-meas_filter(state_wide_1,input$data_type,input$measure2)
     corr_data <- cbind(m1,m2)
-    print(corr_data)
+    
   })
   corr_bw_measures<-reactive({
     corr_bw_measures <- cor(meas_filter(state_wide_1,input$data_type,input$measure1),
@@ -102,11 +102,11 @@ shinyServer(function(input, output,session) {
                        domain=as.data.frame(dplyr::select(cities_for_leaflet(),DV)))
     print("did you get this far?")
     cities_leaflet <- leaflet(data=cities_for_leaflet()) %>%
-      addProviderTiles("CartoDB.Positron") %>% #(providers$CartoDB.Positron)
+      addProviderTiles("CartoDB.Positron") %>% 
       setView(lng = -93.85, lat = 37.45, zoom = 4) %>%
       addCircleMarkers(data=cities_for_leaflet(),
                      lng= ~Longitude, lat= ~Latitude, radius=~radius,
-                     color= ~pal(DV),#c("red"), cities_for_leaflet()$Data_Value
+                     color= ~pal(DV),
                      fillOpacity = 0.5,
                      popup = ~paste('<b> City:</b>',CityName,'<br>',
                                     '<b>Prevalence: </b>', DV, '<br>', 
