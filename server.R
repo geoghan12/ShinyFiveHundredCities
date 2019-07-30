@@ -4,6 +4,8 @@
 
 #### Adding one line here to test kraken
 
+### hrs_kraken_test branch change no2
+
 # Define server logic required to draw a histogram
 shinyServer(function(input, output,session) {
 
