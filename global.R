@@ -1,6 +1,11 @@
 # Global for 500 Hundred Cities App
 # Sophie Geoghan
 # July 17,2018
+
+#### add changes to the master branch
+
+#### change no2 master branch
+
 library(shiny)
 library(dplyr)
 library(maps)
@@ -69,7 +74,7 @@ within_cities = within_cities %>%   mutate(.,radius=ifelse(PopulationCount <= cu
 
 # Cleaning data for Tab 3 - ONLY DONE ONCE and saved. ####
 # Takes 3 minutes to run if you want to check it.
-# I was taking GeoLocation from a string "(Latitude,Longitude)" 
+# I was taking GeoLocation from a string "(Latitude,Longitude)"
 # to 2 numerical columns.
 
 # within_cities <- five_hundie %>%
@@ -88,7 +93,7 @@ within_cities = within_cities %>%   mutate(.,radius=ifelse(PopulationCount <= cu
 #   return(cbind(as.numeric(my_lat),as.numeric(my_long)))
 # }
 # lat_long <- fix_long_lat(within_cities$GeoLocation)
-# 
+#
 # within_cities <- within_cities %>%
 #   mutate(.,Latitude=lat_long[,1],
 #          Longitude=lat_long[,2]) %>%
